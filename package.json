@@ -1,12 +1,11 @@
 {
   "devDependencies": {
     "@playwright/test": "^1.23.4",
+    "@reportportal/agent-js-playwright": "^5.0.5",
     "playwright": "^1.23.3"
   },
-  
-    "scripts": {
-      "test": "npx playwright test",
-      "test ignore": "npx playwright test --grep-invert @slow"
-    }
-  
+  "scripts": {
+    "test": "npx playwright test --config=playwright.config.ts",
+    "test ignore": "npx playwright test --grep-invert @slow"
+  }
 }
