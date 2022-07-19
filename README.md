@@ -1,5 +1,4 @@
 # Playwright-cucumber-Typescript
-<<<<<<< HEAD
 
 #Step 1:
 #install Playwright
@@ -9,6 +8,7 @@
 npm init playwright@latest
 # Or create a new project
 npm init playwright@latest new-project
-=======
+
 To run this :npx playwright test
->>>>>>> 6f364e86eaa7c9e7a0d13ae6b77164da8c0b307d
+Report io integration: Website
+https://www.npmjs.com/package/@reportportal/agent-js-playwright
