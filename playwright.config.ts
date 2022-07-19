@@ -2,17 +2,22 @@
 import { type PlaywrightTestConfig, devices } from '@playwright/test';
 
 const config: PlaywrightTestConfig = {
-  forbidOnly: !!process.env.CI,
-  retries: process.env.CI ? 2 : 0,
-  workers: 3,
+  testDir: './e2e',
+  retries: 0,
+  workers: 1,
   fullyParallel: true,
-  use: {
+  reporter: 'html',
+  expect:{
+    timeout:3000,
+  },
   
+  use: {
     trace: 'on-first-retry',
     headless: false,
     launchOptions: {
       slowMo: 50,
     },
+    screenshot:'on',
   },
   projects: [
     {
@@ -28,5 +33,10 @@ const config: PlaywrightTestConfig = {
       use: { ...devices['Desktop Safari'] },
     },
   ],
+  outputDir: 'test-results/',
+
+ 
 };
 export default config;
+
+//D:\Playwright-cucumber-Typescript\web\playwright.config.ts
